@@ -1,0 +1,16 @@
+{
+    "vocabulary" : {
+        "direct" : {
+            "title": "direct",
+            "translate": "bezpośredni, kierować"
+        },
+        "doubt" : {
+            "title": "doubt",
+            "translate": "wątpliwości"
+        },
+        "steam" : {
+            "title": "steam",
+            "translate": "powstrzymać"
+        }
+    }
+}
