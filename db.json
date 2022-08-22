@@ -1,16 +1,29 @@
 {
-    "vocabulary" : {
-        "direct" : {
-            "title": "direct",
-            "translate": "bezpośredni, kierować"
-        },
-        "doubt" : {
-            "title": "doubt",
-            "translate": "wątpliwości"
-        },
-        "steam" : {
-            "title": "steam",
-            "translate": "powstrzymać"
-        }
+  "vocabulary": [
+    {
+      "id": "1",
+      "title": "direct",
+      "translate": "bezpośredni, kierować"
+    },
+    {
+      "id": "2",
+      "title": "doubt",
+      "translate": "wątpliwości"
+    },
+    {
+      "id": "3",
+      "title": "steam",
+      "translate": "powstrzymać"
+    },
+    {
+      "title": "void",
+      "translate": "unieważnić",
+      "id": "t-OKqyh"
+    },
+    {
+      "title": "direct",
+      "translate": "bezpośredni",
+      "id": "GJG_8u9"
     }
+  ]
 }
