@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Word } from 'src/app/interfaces/word';
 import { WordService } from 'src/app/services/word.service';
 
@@ -16,15 +16,35 @@ export class AddComponent implements OnInit {
       translate: new FormControl('')
   })
 
-  constructor(private wordService: WordService, private router: Router) { }
+  tempId: string | null = ''
+
+  constructor(private wordService: WordService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.fetchWord()
   }
 
   onSubmit() {
-    console.log(this.vocabularyForm.getRawValue())
-    this.wordService.postWord(this.vocabularyForm.getRawValue()).subscribe(res => res)
+    console.log(this.tempId)
+    if (this.tempId) {
+      this.wordService.putWord(this.vocabularyForm.getRawValue(), this.tempId).subscribe(res => res)
+    } else {
+      this.wordService.postWord(this.vocabularyForm.getRawValue()).subscribe(res => res)
+    }
     this.router.navigate(['/'])
   }
+
+  fetchWord() {
+    this.tempId = this.route.snapshot.paramMap.get('id')
+    if (this.tempId) {
+      this.wordService.getWord(this.tempId).subscribe((res: any) => {
+        this.vocabularyForm.setValue({
+          title: res.title,
+          translate: res.translate
+        })
+      })
+    }
+  }
+
 
 }

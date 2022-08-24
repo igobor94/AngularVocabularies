@@ -15,10 +15,13 @@ export class WordService {
   getWords() {
     return this.http.get(this.server)
   }
+  getWord(id: string) {
+    return this.http.get(this.server + `/${id}`)
+  }
   postWord(body: Word | object) { 
     return this.http.post(this.server, body, this.header)
   }
-  putWord(body: Word | Object) {
-    return this.http.put(this.server, body, this.header)
+  putWord(body: Word | Object, id: string | null) {
+    return this.http.put(this.server + `/${id}`, body, this.header)
   }
 }
