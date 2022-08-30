@@ -12,16 +12,18 @@ export class HomeComponent implements OnInit {
 
   words: Word[] = [];
 
-  constructor(private wordService: WordService, private elRef: ElementRef, private router: Router) { }
+  constructor(private wordService: WordService) { }
 
   ngOnInit(): void {
-    this.wordService.getWords().subscribe((res: any) => {this.words = [...this.words, ...res]; console.log(this.words)});
+    this.getVocabulary();
   }
 
+  getVocabulary() {
+    this.wordService.getWords().subscribe((res: any) => {this.words = [], this.words = [...this.words, ...res]; console.log(res)});
+  }
 
-
-  onEdit(event: MouseEvent, id: string) {
-    this.router
+  onDelete(id: string) {
+    this.wordService.deleteWord(id).subscribe((res: any) => this.getVocabulary())
   }
 
 }

@@ -31,8 +31,7 @@
           </a>
         </td>
         <td>
-
-          <a [routerLink]="['/delete/', word.id]"
+          <a (click)="onDelete(word.id)"
             class="bg-transparent hover:bg-red-700 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-700 hover:border-transparent rounded">
             <i class="fa-solid fa-trash-can"></i>
           </a>

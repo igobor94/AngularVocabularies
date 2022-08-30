@@ -24,4 +24,7 @@ export class WordService {
   putWord(body: Word | Object, id: string | null) {
     return this.http.put(this.server + `/${id}`, body, this.header)
   }
+  deleteWord(id: string | null) {
+    return this.http.delete(this.server + `/${id}`, this.header)
+  }
 }

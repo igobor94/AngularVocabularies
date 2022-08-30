@@ -1,39 +1,29 @@
 {
   "vocabulary": [
     {
-      "title": "direct",
-      "translate": "bezpośredni, kierować",
-      "id": "1"
+      "title": "rely",
+      "translate": "polegać, liczyć na kimś/czymś",
+      "id": 1
     },
     {
-      "id": "2",
-      "title": "doubt",
-      "translate": "wątpliwości"
+      "title": "assess",
+      "translate": "oszacować",
+      "id": 2
     },
     {
-      "id": "3",
-      "title": "steam",
-      "translate": "powstrzymać"
+      "title": "refuse",
+      "translate": "odmówić",
+      "id": 3
     },
     {
-      "title": "void",
-      "translate": "unieważnić",
-      "id": "t-OKqyh"
+      "title": "demise",
+      "translate": "upadek, koniec",
+      "id": 4
     },
     {
-      "title": "ssssssssss",
-      "translate": "sssdasdasdasd",
-      "id": "GJG_8u9"
-    },
-    {
-      "title": "sfsafas",
-      "translate": "safas",
-      "id": "efIxKcC"
-    },
-    {
-      "title": "sasad",
-      "translate": "asfasf",
-      "id": "-hVHmeR"
+      "title": "defy",
+      "translate": "przeciwstawić się, sprzeciwić się",
+      "id": 5
     }
   ]
 }
