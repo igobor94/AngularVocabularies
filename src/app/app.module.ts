@@ -10,6 +10,8 @@ import { AddComponent } from './components/add/add.component';
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LogPipe } from './pipes/log.pipe';
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -18,14 +20,16 @@ import { LogPipe } from './pipes/log.pipe';
     FooterComponent,
     AddComponent,
     HomeComponent,
-    LogPipe
+    LogPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CoreModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
